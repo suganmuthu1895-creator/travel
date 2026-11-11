@@ -1,0 +1,9 @@
+{
+  "name": "travel-login-app",
+  "version": "1.0.0",
+  "description": "Full-stack React & Node.js Login Authentication System",
+  "scripts": {
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run dev"
+  }
+}

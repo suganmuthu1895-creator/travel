@@ -1,0 +1,16 @@
+{
+  "name": "login-backend",
+  "version": "1.0.0",
+  "description": "Node.js Express backend for login verification",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "sqlite3": "^6.0.1"
+  }
+}
