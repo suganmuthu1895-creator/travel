@@ -12,8 +12,8 @@ export default function Navbar({ activeTab, setActiveTab, user, onOpenAuth, onLo
             <Bus size={22} className="brand-bus-icon" />
           </div>
           <div>
-            <span className="brand-name">Wander<span className="brand-accent">Bus</span></span>
-            <span className="brand-sub">Express Intercity</span>
+            <span className="brand-name">Bus Travel <span className="brand-accent">Booking</span></span>
+            <span className="brand-sub">Travel Made Simple</span>
           </div>
         </div>
 

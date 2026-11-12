@@ -97,11 +97,12 @@ body {
 }
 
 .brand-name {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 800;
   color: var(--text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
   display: block;
+  white-space: nowrap;
 }
 
 .brand-accent {
