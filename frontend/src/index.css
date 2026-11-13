@@ -2065,3 +2065,426 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+/* =========================================================
+   TRAVEL APP UI ENHANCEMENTS
+   Keeps the existing class names and component structure.
+   ========================================================= */
+
+:root {
+  --trust-navy: #173b72;
+  --trust-navy-hover: #102b54;
+  --trust-navy-light: #edf4ff;
+  --trust-navy-border: #c9dcf7;
+  --elegant-gold: #a66a20;
+  --elegant-gold-hover: #875218;
+  --elegant-gold-light: #fff7e8;
+  --elegant-gold-border: #f0d8ad;
+  --canvas-bg: #f4f7fb;
+  --surface-card: #ffffff;
+  --text-primary: #142238;
+  --text-secondary: #4b5d73;
+  --text-muted: #718096;
+  --border-light: #e5ebf2;
+  --border-subtle: #cbd5e1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.55;
+  background:
+    radial-gradient(ellipse at 8% 0%, rgba(42, 100, 170, 0.08), transparent 34%),
+    radial-gradient(ellipse at 100% 90%, rgba(214, 164, 87, 0.08), transparent 30%),
+    var(--canvas-bg);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(37, 99, 171, 0.24);
+  outline-offset: 2px;
+}
+
+.app-navbar {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 4px 22px rgba(20, 34, 56, 0.045);
+}
+
+.navbar-container {
+  min-height: 70px;
+}
+
+.brand-icon-box {
+  background: linear-gradient(145deg, #24558e, #102b54);
+  border-radius: 13px;
+  box-shadow: 0 7px 16px rgba(23, 59, 114, 0.2);
+}
+
+.navbar-nav {
+  background: #f5f7fa;
+  border-color: #e8edf3;
+}
+
+.nav-link {
+  min-height: 36px;
+}
+
+.nav-link.active {
+  box-shadow: 0 2px 8px rgba(20, 34, 56, 0.08);
+}
+
+.main-content {
+  padding-top: 38px;
+  padding-bottom: 56px;
+}
+
+.search-card {
+  border: 1px solid rgba(218, 227, 238, 0.9);
+  border-radius: 22px;
+  padding: clamp(22px, 3vw, 34px);
+  box-shadow: 0 12px 35px rgba(20, 34, 56, 0.065);
+}
+
+.search-title {
+  font-size: clamp(22px, 3vw, 28px);
+  letter-spacing: -0.035em;
+}
+
+.search-subtitle {
+  line-height: 1.6;
+}
+
+.search-input {
+  min-height: 48px;
+  background: #f9fbfd;
+  border-color: #d8e1ec;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.search-input:hover {
+  border-color: #aebfd3;
+}
+
+.search-input:focus {
+  border-color: #356ca8;
+  box-shadow: 0 0 0 4px rgba(53, 108, 168, 0.11);
+}
+
+.swap-btn {
+  box-shadow: 0 2px 5px rgba(20, 34, 56, 0.04);
+}
+
+.search-submit-btn,
+.nav-signin-btn,
+.checkout-btn,
+.submit-btn,
+.empty-cta-btn {
+  background: linear-gradient(135deg, #24558e, #173b72);
+  box-shadow: 0 6px 14px rgba(23, 59, 114, 0.17);
+}
+
+.search-submit-btn:hover,
+.nav-signin-btn:hover,
+.checkout-btn:hover:not(:disabled),
+.submit-btn:hover:not(:disabled),
+.empty-cta-btn:hover {
+  background: linear-gradient(135deg, #1c477c, #102b54);
+  box-shadow: 0 8px 18px rgba(23, 59, 114, 0.22);
+}
+
+.route-chip {
+  border-radius: 999px;
+  padding: 7px 13px;
+}
+
+.filter-pill {
+  border-radius: 999px;
+  padding: 7px 15px;
+}
+
+.bus-item-wrapper,
+.booking-record-card {
+  border-radius: 18px;
+  border-color: #e4eaf1;
+  box-shadow: 0 5px 18px rgba(20, 34, 56, 0.045);
+}
+
+.bus-item-wrapper:hover,
+.booking-record-card:hover {
+  border-color: #c8d6e6;
+  box-shadow: 0 10px 26px rgba(20, 34, 56, 0.085);
+  transform: translateY(-2px);
+}
+
+.bus-card {
+  padding: clamp(18px, 2.5vw, 26px);
+}
+
+.bus-timings-col {
+  background: linear-gradient(135deg, #f8fbff, #f3f7fc);
+  border-color: #e6edf5;
+}
+
+.duration-line .line {
+  background: linear-gradient(90deg, #b9c9dc, #d7e0eb);
+}
+
+.fare-amount,
+.total-highlight {
+  color: #1d4f86;
+}
+
+.select-seats-btn {
+  border-radius: 9px;
+  min-height: 40px;
+}
+
+.seat-layout-drawer {
+  background: #f6f9fd;
+}
+
+.bus-interior {
+  border-style: solid;
+  border-color: #e0e8f1;
+  box-shadow: inset 0 1px 5px rgba(20, 34, 56, 0.025);
+}
+
+.bus-seat {
+  min-width: 34px;
+}
+
+.bus-seat.available:hover {
+  box-shadow: 0 4px 10px rgba(23, 59, 114, 0.12);
+}
+
+.passenger-row-card,
+.fare-summary-box,
+.boarding-pass {
+  border-color: #e3eaf2;
+  box-shadow: 0 3px 10px rgba(20, 34, 56, 0.035);
+}
+
+.p-input,
+.form-input,
+.point-select,
+.sort-select {
+  min-height: 40px;
+  border-color: #d6e0eb;
+}
+
+.p-input:focus,
+.form-input:focus,
+.point-select:focus,
+.sort-select:focus {
+  border-color: #356ca8;
+  box-shadow: 0 0 0 3px rgba(53, 108, 168, 0.1);
+}
+
+.modal-overlay {
+  background: rgba(13, 27, 45, 0.58);
+}
+
+.ticket-modal-card,
+.auth-modal-card {
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(8, 20, 38, 0.22);
+}
+
+.ticket-success-icon-wrap {
+  box-shadow: 0 5px 14px rgba(22, 163, 74, 0.12);
+}
+
+.ticket-btn,
+.b-action-btn {
+  min-height: 38px;
+}
+
+.empty-bookings-card {
+  border-color: #cbd8e6;
+  background: linear-gradient(145deg, #ffffff, #f8fbff);
+}
+
+.booking-record-card.cancelled {
+  background: #fffafa;
+}
+
+.auth-modal-card {
+  padding: clamp(24px, 4vw, 34px);
+}
+
+.form-input {
+  min-height: 44px;
+}
+
+.submit-btn {
+  min-height: 46px;
+}
+
+.spinner {
+  flex-shrink: 0;
+}
+
+/* Subtle, consistent motion */
+.nav-link,
+.route-chip,
+.filter-pill,
+.select-seats-btn,
+.ticket-btn,
+.b-action-btn,
+button {
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+@media (max-width: 700px) {
+  .navbar-container {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .navbar-nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+  }
+
+  .main-content {
+    padding: 22px 15px 40px;
+  }
+
+  .search-card {
+    border-radius: 17px;
+    padding: 20px 16px;
+  }
+
+  .search-inputs-grid {
+    gap: 12px;
+  }
+
+  .swap-btn {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .swap-btn:hover {
+    transform: rotate(270deg);
+  }
+
+  .bus-card-main {
+    gap: 14px;
+  }
+
+  .bus-timings-col {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .time-val {
+    font-size: 15px;
+  }
+
+  .ticket-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-card-route {
+    gap: 8px;
+  }
+
+  .route-city-label {
+    font-size: 14px;
+  }
+
+  .booking-card-footer {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .user-profile-pill {
+    gap: 6px;
+    padding-right: 8px;
+  }
+
+  .nav-user-info {
+    display: none;
+  }
+
+  .search-title {
+    font-size: 21px;
+  }
+
+  .bus-card {
+    padding: 16px;
+  }
+
+  .bus-timings-col {
+    flex-wrap: wrap;
+  }
+
+  .duration-line-wrap {
+    min-width: 80px;
+  }
+
+  .fare-display {
+    text-align: left;
+  }
+
+  .fare-amount {
+    font-size: 22px;
+  }
+
+  .booking-card-route {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .route-col,
+  .route-col.right {
+    text-align: left;
+  }
+
+  .route-duration-center {
+    align-items: flex-start;
+  }
+
+  .footer-details {
+    gap: 10px;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
